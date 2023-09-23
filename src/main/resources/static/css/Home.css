@@ -4,7 +4,14 @@
 
     media queries
     1000 px about-iamge 250px 250px
-    760 px about-me goes flex col
+    795 --> skill font shifts to 2.20rem font and 2.5rem icon size
+    760px --> about-me goes flex col
+    750 --> grid goes into row form
+    700 --> navbar hamburger
+    700 --> icons and font on header change . icons --> 120 by 120 and font idk
+    700 --> skills go into col form and use original font sizes but make sure skill container shifts to 100% width
+
+
 
 
 
@@ -26,6 +33,7 @@ body{
 header{
     width: 100%;
     height: 100vh;
+    min-height: 900px;
     background-image: url("../../static/images/Hero-edit.jpg");
     background-size: cover;
 }
@@ -66,9 +74,23 @@ header{
     display: block;
     font-size: 1.5rem;
 }
-.contactMe{
-    margin-right: auto; /* this makes contact stick to the right */
+.toggle-button{
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
 }
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
 .navbar-links li a::before{
     content: '';
     display: block;
@@ -88,6 +110,7 @@ header{
     align-items: center;
     width: 80%;
     height: 100vh;
+    min-height: 900px;
     margin: auto;
 }
 .banner-Text{
@@ -108,6 +131,20 @@ header{
     margin-top: 0;
     list-style: none;
     display: inline-flex;
+}
+.font-icon-GitHub{
+    font-size: 240px;
+    color: white;
+}
+.font-icon-GitHub:hover{
+    color: #dedddd;
+}
+.font-icon-linkIn{
+    font-size: 240px;
+    color:#0077b5;
+}
+.font-icon-linkIn:hover{
+    color: #03649a;
 }
 .list-links li{
     padding:1em;
@@ -321,11 +358,12 @@ header{
     display: flex;
     gap: 1em;
     list-style: none;
+    padding: 0;
 }
 .footer-links ul li a{
     text-decoration: none;
     color: #fafafa;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 .footer-links ul li a i:hover{
     transition: 100ms ease-in-out;
@@ -335,7 +373,7 @@ header{
     color: #0077B5;
 }
 .github-icon:hover{
-    color: #171515;
+    color: rgba(222, 222, 222, 0.82);
 }
 .instagram-icon:hover{
     color: #e1306c;
@@ -444,7 +482,41 @@ header{
     font-size: 2rem;
 }
 
-
+@media (max-width: 700px) {
+    .toggle-button{
+        cursor: pointer;
+        display: flex;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+    }
+    .navbar-links li{
+        padding-left: 0;
+        width: 100%;
+    }
+    .navbar-links li a{
+        text-align: center;
+        padding: .75rem 1rem;
+    }
+    .navbar-links li a::before{
+        content: none;
+    }
+    .navbar-links li a:hover{
+        background-color: rgba(176, 176, 176, 0.48);
+    }
+    .navbar-links{
+        display: none;
+    }
+    .active{
+        display: block;
+    }
+}
 
 
 
@@ -479,7 +551,6 @@ header{
     display: flex;
     gap: 1rem;
 }
-
 
 
 

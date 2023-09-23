@@ -2,7 +2,7 @@ window.onload = () => {
     //set up all element listeners
     fontIconClickable();
     navbarScrollListener();
-
+    hamburgerMenuListener();
 }
 
 function fontIconClickable(){
@@ -32,4 +32,11 @@ function changeScrollBarColor(scrollPos){
     else{
         document.querySelector(".navbar").classList.remove('navbar-scroll')
     }
+}
+function hamburgerMenuListener() {
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+    const navLinks = document.getElementsByClassName('navbar-links')[0]
+    toggleButton.addEventListener('click',()=>{
+        navLinks.classList.toggle('active')
+    })
 }
