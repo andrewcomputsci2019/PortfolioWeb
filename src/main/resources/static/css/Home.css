@@ -1,0 +1,485 @@
+/*
+    https://coolors.co/visualizer/000500-362417-92817a
+    new palette maybe ^
+
+    media queries
+    1000 px about-iamge 250px 250px
+    760 px about-me goes flex col
+
+
+
+
+ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    background-color: #0C0C0C;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../static/images/Hero-edit.jpg");
+    background-size: cover;
+}
+.navbar{
+    display: flex;
+    font-family: 'Poppins', sans-serif;;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    z-index: 1;
+}
+.navbar-scroll{
+    background-color: #1514188c;
+}
+.LOGO{
+    font-size: 2.5rem;
+    margin: .5rem;
+    color: white;
+}
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li{
+    list-style: none;
+    padding-left: 1em;
+}
+.navbar-links li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+    font-size: 1.5rem;
+}
+.contactMe{
+    margin-right: auto; /* this makes contact stick to the right */
+}
+.navbar-links li a::before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #1a80a1;
+    transition: all ease-in-out .25s;
+}
+.navbar-links li a:hover::before{
+    width: 100%;
+}
+.Banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+}
+.banner-Text{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+}
+.banner-Text h1{
+    font-size: 4rem;
+}
+.banner-Text h2{
+    font-size: 2.8rem;
+}
+.line-spacer{
+    width: 100%;
+}
+.list-links{
+    margin-top: 0;
+    list-style: none;
+    display: inline-flex;
+}
+.list-links li{
+    padding:1em;
+}
+.about{
+    margin-top: 2.5em;
+    margin-bottom: 5em;
+}
+.about-header-size{
+    font-size: 3rem;
+}
+.text-center{
+    text-align: center;
+}
+.white-Font{
+    color: #fafafa;
+    font-family: 'Poppins', sans-serif;
+}
+.black-Font{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+.circle{
+    box-sizing: border-box;
+    padding: 0;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+.flex-container{
+    display: flex;
+    width: 75%;
+    margin: auto;
+    gap: 1em;
+    max-width: 1100px;
+}
+.text-container{
+    text-align: left;
+    font-size: 1.5rem;
+}
+.flex-skills{
+    display: flex;
+    margin: auto;
+    width: 75%;
+    max-width: 850px;
+    flex-direction: row;
+    gap: 2em;
+}
+.flex-skill{
+    display: flex;
+    align-items: center;
+}
+.margin-auto{
+    margin: auto;
+}
+.skill-flex-group{
+    width: 50%;
+}
+.skill-group{
+    margin-bottom: .5rem;
+}
+.font-icon{
+    font-size: 3rem;
+    margin-right: 5px;
+}
+.skill-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.skill-font-size{
+    font-size: 2.5rem;
+}
+.skill-section-splitter{
+    width: 100%;
+    height: .25rem;
+    border-radius: 5px;
+    background-color: #1a80a1;
+}
+.Projects{
+    background-color: #F7F7FF;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+}
+.underline{
+    position: relative;
+}
+.underline::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 10%;
+    height: 5px;
+    background-color: #1a80a1;
+    display: block;
+    border-radius: 5px;
+}
+.underline-alt{
+    position: relative;
+}
+.underline-alt::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 10%;
+    height: 5px;
+    background-color: #92140c;
+    display: block;
+    border-radius: 5px;
+}
+.project-flex{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+    gap: 1rem;
+}
+.project-card{
+    min-width: 300px;
+    max-width: 675px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 5px;
+    transition: 250ms ease-in-out;
+    z-index: 0;
+}
+.project-card:hover{
+    transform: scale(1.02);
+}
+.project-flex-stack{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.project-image{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.project-label-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-size: 2rem;
+}
+.project-links{
+    display: flex;
+    gap: .25rem;
+}
+.project-skill-labels{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    list-style: none;
+    padding-left: .5rem;
+    margin: 0;
+}
+.project-skill-label{
+    display: flex;
+}
+.small-font-size{
+    font-size: 1rem;
+}
+.project-description{
+    width: 100%;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    padding: 0 .5rem 0 .5rem;
+}
+.description-font-size{
+    font-size: 1.1rem;
+}
+.link-icon{
+    color: black;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+
+.Work-Education{
+    background-color: #ebeeee;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.footer-ender{
+    background-color: #303030;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.footer-links{
+    display: flex;
+    justify-content: center;
+}
+.footer-links ul{
+    display: flex;
+    gap: 1em;
+    list-style: none;
+}
+.footer-links ul li a{
+    text-decoration: none;
+    color: #fafafa;
+    font-size: 2rem;
+}
+.footer-links ul li a i:hover{
+    transition: 100ms ease-in-out;
+    transform: translateY(-3px);
+}
+.linkin-icon:hover{
+    color: #0077B5;
+}
+.github-icon:hover{
+    color: #171515;
+}
+.instagram-icon:hover{
+    color: #e1306c;
+}
+.mail-icon:hover{
+    color: #11ABB0;
+}
+
+
+.underline-work{
+    position: relative;
+}
+.underline-work::after{
+    content: '';
+    position: absolute;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 2px;
+    background-color: black;
+}
+.Work-Education-grid{
+    display: grid;
+    grid-template-columns: .5fr 5px 2fr;
+    grid-template-rows: auto;
+    width: 75%;
+    max-width: 1200px;
+    margin: auto;
+    row-gap: .5rem;
+}
+
+.education-tile{
+    display: flex;
+    justify-content: center;
+    grid-row: 1;
+    grid-column: 1/1;
+}
+.ucsd-info{
+    grid-row: 1;
+    grid-column: 3/3;
+}
+.flex-education-info{
+    display: flex;
+    flex-direction: column;
+}
+.major-name{
+    text-align: left;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+.uni-info{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: 0;
+}
+.uni-time-list-labels{
+    font-size: 1.15rem;
+}
+.horizontal-spacer{
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    position: relative;
+    height: 1px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+.miracosta-info{
+    grid-row: 2;
+    grid-column: 3/3;
+}
+.uni-description{
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: lighter;
+    text-align: left;
+    padding-left: .3rem;
+    padding-right: .25rem;
+}
+.vertical-spacer{
+    grid-column: 2/2;
+    grid-row: 1 / span 5;
+    width: 1px;
+    border-radius: 10px;
+    background-color:rgba(0, 0, 0, 0.25);
+}
+.work-title{
+    display: flex;
+    justify-content: center;
+    grid-row: 4;
+}
+.tutor-info{
+    grid-row: 4;
+    grid-column: 3/3;
+}
+.LG-swe-info{
+    grid-row: 5;
+    grid-column: 3/3;
+}
+.grid-title{
+    font-size: 2rem;
+}
+
+
+
+
+
+
+/*old stuff maybe needed latter*/
+.flex-work-education-section{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+}
+.education-flex-sections{
+    display: flex;
+    flex-direction: row;
+}
+.Education-title{
+    font-size: 1.25rem;
+}
+.education-flex-section{
+    display: flex;
+    flex-direction: column;
+}
+.education-place-container{
+    display: flex;
+    flex-direction: column;
+}
+.education-info-list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+
