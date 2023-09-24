@@ -38,7 +38,11 @@ function changeScrollBarColor(scrollPos){
 function hamburgerMenuListener() {
     const toggleButton = document.getElementsByClassName('toggle-button')[0]
     const navLinks = document.getElementsByClassName('navbar-links')[0]
+    const header = document.querySelector("header")
     toggleButton.addEventListener('click',()=>{
         navLinks.classList.toggle('active')
+        if(window.scrollY < header.offsetHeight){
+            document.querySelector(".navbar").classList.toggle('navbar-scroll')
+        }
     })
 }
