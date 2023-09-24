@@ -251,6 +251,7 @@ header::after{
     right: 0;
     margin: auto;
     width: 10%;
+    min-width: 150px;
     height: 5px;
     background-color: #1a80a1;
     display: block;
@@ -266,6 +267,7 @@ header::after{
     right: 0;
     margin: auto;
     width: 10%;
+    min-width: 210px;
     height: 5px;
     background-color: #92140c;
     display: block;
