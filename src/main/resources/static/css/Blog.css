@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    background-color: #0C0C0C;
+}
+.navbar{
+    display: flex;
+    font-family: 'Poppins', sans-serif;;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    z-index: 1;
+}
+.white-Font{
+    font-family: 'Poppins', sans-serif;;
+    color: white;
+}
+.navbar-scroll{
+    background-color: #1514188c;
+}
+.LOGO{
+    font-size: 2.5rem;
+    margin: .5rem;
+    color: white;
+}
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li{
+    list-style: none;
+    padding-left: 1em;
+}
+.navbar-links li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+    font-size: 1.5rem;
+}
+.toggle-button{
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.navbar-links li a::before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #1a80a1;
+    transition: all ease-in-out .25s;
+}
+.navbar-links li a:hover::before{
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+}
+.image-background-blur{
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    background: url("../../static/images/Hero-edit.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(40px);
+    -webkit-filter: blur(40px);
+    isolation: isolate;
+}
+.image-background-blur::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(19, 17, 17, 0.35);
+}
+.flex-content-container{
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    top: 30%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.construction-text{
+    font-size: 4rem;
+}
+.construction-text-sub{
+    font-size: 2rem;
+}
+.return-button{
+    background-color: #1a80a1;
+    padding: .5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+.return-button:hover{
+    background-color: #14647e;
+}
+@media (max-width: 700px) {
+    .toggle-button{
+        cursor: pointer;
+        display: flex;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+    }
+    .navbar-links li{
+        padding-left: 0;
+        width: 100%;
+    }
+    .navbar-links li a{
+        text-align: center;
+        padding: .75rem 1rem;
+    }
+    .navbar-links li a::before{
+        content: none;
+    }
+    .navbar-links li a:hover{
+        background-color: rgba(176, 176, 176, 0.48);
+    }
+    .navbar-links{
+        display: none;
+    }
+    .active{
+        display: block;
+    }
+}
+@media (max-width: 1000px) {
+    .construction-text{
+        font-size: 3rem;
+    }
+    .construction-text-sub{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 750px) {
+    .construction-text{
+        font-size: 2.5rem;
+    }
+    .construction-text-sub{
+        font-size: 1.25rem;
+    }
+}
+@media (max-width: 625px) {
+    .construction-text{
+        font-size: 2rem;
+    }
+    .construction-text-sub{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 500px) {
+    .construction-text{
+        font-size: 1.5rem;
+    }
+    .construction-text-sub{
+        font-size: .90rem;
+    }
+}
+@media (max-width: 450px) {
+    .construction-text{
+        font-size: 1.25rem;
+    }
+    .construction-text-sub{
+        font-size: .80rem;
+    }
+}
