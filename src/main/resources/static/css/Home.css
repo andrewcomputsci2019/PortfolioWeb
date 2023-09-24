@@ -37,6 +37,17 @@ header{
     background-image: url("../../static/images/Hero-edit.jpg");
     background-size: cover;
 }
+
+.header-isolate{
+    isolation: isolate;
+}
+header::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 0, 0, 0.07);
+    z-index: -1;
+}
 .navbar{
     display: flex;
     font-family: 'Poppins', sans-serif;;
@@ -515,6 +526,19 @@ header{
     }
     .active{
         display: block;
+    }
+    .font-icon-GitHub{
+        font-size: 120px;
+    }
+    .font-icon-linkIn{
+        font-size: 120px;
+    }
+    .banner-Text h1{
+        font-size: 2.8rem;
+        margin-top: 0;
+    }
+    .banner-Text h2{
+        font-size: 1.75rem;
     }
 }
 

@@ -28,8 +28,10 @@ function changeScrollBarColor(scrollPos){
     let height = item.offsetHeight
     if(height < scrollPos){
         document.querySelector(".navbar").classList.add('navbar-scroll')
+        document.querySelector('header').classList.remove('header-isolate')
     }
     else{
+        document.querySelector('header').classList.add('header-isolate')
         document.querySelector(".navbar").classList.remove('navbar-scroll')
     }
 }
