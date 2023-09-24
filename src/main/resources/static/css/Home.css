@@ -638,39 +638,3 @@ header::after{
         display: none;
     }
 }
-
-
-
-/*old stuff maybe needed latter*/
-.flex-work-education-section{
-    padding-top: 25px;
-    padding-bottom: 25px;
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    margin: auto;
-}
-.education-flex-sections{
-    display: flex;
-    flex-direction: row;
-}
-.Education-title{
-    font-size: 1.25rem;
-}
-.education-flex-section{
-    display: flex;
-    flex-direction: column;
-}
-.education-place-container{
-    display: flex;
-    flex-direction: column;
-}
-.education-info-list{
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-}
-
-
-
