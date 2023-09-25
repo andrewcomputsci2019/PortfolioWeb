@@ -3,6 +3,7 @@ window.onload = () => {
     fontIconClickable();
     navbarScrollListener();
     hamburgerMenuListener();
+    addSvgAspectChanger();
 }
 
 function fontIconClickable(){
@@ -23,7 +24,6 @@ function navbarScrollListener(){
     })
 }
 function changeScrollBarColor(scrollPos){
-    console.log("scroll function called")
     let item = document.querySelector("header")
     let height = item.offsetHeight
     if(height < scrollPos){
@@ -45,4 +45,19 @@ function hamburgerMenuListener() {
             document.querySelector(".navbar").classList.toggle('navbar-scroll')
         }
     })
+}
+function addSvgAspectChanger(){
+    let eles = document.querySelectorAll('.svg-img-aspect')
+    console.log(eles)
+    eles.forEach((ele) =>{
+        new ResizeObserver(entries => {
+            entries.forEach((entry ) =>{
+                const width = entry.contentRect.width;
+                let el = entry.target
+                const height = (width*9)/16.0
+                el.setAttribute("style","height:"+Math.round(height)+"px")
+            })
+        }).observe(ele)
+    })
+
 }

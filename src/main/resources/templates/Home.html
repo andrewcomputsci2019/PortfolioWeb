@@ -6,8 +6,8 @@
     <title>Andrew Pegg</title>
     <script src="https://kit.fontawesome.com/14bd06b854.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script>
-    <script src="../../resources/static/js/Home.js"></script>
-    <link rel="icon" href="images/fav.png">
+    <script src="/js/Home.js"></script>
+    <link rel="icon" href="/images/fav.png">
     <link rel="icon" href="../../resources/static/images/fav.png">
     <link rel="stylesheet" href="/css/Home.css"> <!--for production-->
     <link rel="stylesheet" href="../../resources/static/css/Home.css"> <!--for hot loading -->
@@ -28,15 +28,15 @@
                 <div class="navbar-links">
                     <ul>
                         <li><a href="#Projects">Projects</a></li>
+                        <li class="contactMe"><a href="#contact">Contact</a></li>
                         <li><a href="Blog.html">Blog</a></li>
                         <li><a href="#">Home</a></li>
-                        <li class="contactMe"><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </nav>
         <div class="Banner">
             <div class="banner-Text">
-                    <h1>Hi my name is Andrew and I love to code things</h1>
+                    <h1>Hi my name is Andrew and I love to code</h1>
                     <h2>I am a NeoVim user, dog lover, Linux enthusiast, and a San Diegan</h2>
             </div>
             <hr class="line-spacer">
@@ -53,7 +53,7 @@
             <h1 class="text-center white-Font about-header-size">About Me</h1>
             <div class="flex-container">
                     <div class="img-container">
-                        <img src="../../resources/static/images/Cropped_Image_Me.png" alt="picture of me" class="circle">
+                        <img src="/images/Cropped_Image_Me.png" alt="picture of me" class="circle">
                     </div>
                     <div class="text-container white-Font margin-auto text-center">
                             <p style="margin-top: .5rem">I am currently a computer science student at UCSD, expected to get my Bachelors by 2025. My current interest inside programming right now is designing and implementing backend systems on distributed software, mostly microservices. I program mostly in Java and use the Spring framework, although I know other languages such as C, C++, and Python.</p>
@@ -198,10 +198,26 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img class="project-image" src="https://i.ytimg.com/vi/Tt1ZOXGZ7Vw/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEsgWihlMA8=&amp;rs=AOn4CLCyn4IBs5N2bEZW-IyPYhgaom-rlg" alt="image of project">
+                    <img class="project-image svg-img-aspect" src="/images/icons8-c-programming.svg" alt="image of project">
                     <div class="project-flex-stack">
-                        <div class="project-label-section">
+                        <div class="project-label-section flex-responsive">
                             <span class="black-Font">C Smart Pointer library</span>
+                            <div class="project-links">
+                                <i class='clickableLink bx bxl-github link-icon' finallink="https://github.com/andrewcomputsci2019/C_SmartPointer/tree/master" ></i>
+                            </div>
+                        </div>
+                        <ul class="project-skill-labels">
+                            <li class="black-Font  small-font-size">C</li>
+                            <li class="black-Font  small-font-size">Cmake</li>
+                        </ul>
+                        <p class="project-description black-Font description-font-size">A simple cross-platform cmake header only library designed to help elevate memory allocations, and operations in the C programming language through reference counting pointers. The library is designed such that double frees, dangling pointers, and memory leaks become minimized to help prevent dangerous memory-related bugs from occurring in a code base.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img class="project-image svg-img-aspect" src="/images/icons8-c-programming.svg" alt="image of project">
+                    <div class="project-flex-stack">
+                        <div class="project-label-section flex-responsive">
+                            <span class="black-Font">Mock Student Information platform</span>
                             <div class="project-links">
                                 <i class='clickableLink bx bxl-github link-icon' finallink="https://github.com/andrewcomputsci2019/C_SmartPointer/tree/master" ></i>
                             </div>
@@ -276,10 +292,10 @@
         <div class="footer-ender" id="contact">
                 <div class="footer-links">
                     <ul>
-                        <li><a href="#"><i class='bx bxl-linkedin linkin-icon'  ></i></a></li>
-                        <li><a href="#"><i class='bx bxl-github github-icon' ></i></a></li>
-                        <li><a href="#"><i class='bx bxl-instagram instagram-icon' ></i></a></li>
-                        <li><a href="#"><i class='bx bx-envelope mail-icon'></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/andrew-pegg-07a752211"><i class='bx bxl-linkedin linkin-icon'  ></i></a></li>
+                        <li><a href="https://github.com/andrewcomputsci2019"><i class='bx bxl-github github-icon' ></i></a></li>
+                        <li><a href="https://www.instagram.com/andrew_pegg2/"><i class='bx bxl-instagram instagram-icon'></i></a></li>
+                        <li><a href="mailto:andrew.m.pegg2@gmail.com"><i class='bx bx-envelope mail-icon'></i></a></li>
                     </ul>
                 </div>
         </div>

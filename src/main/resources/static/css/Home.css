@@ -33,7 +33,7 @@ header{
     width: 100%;
     height: 100vh;
     min-height: 900px;
-    background-image: url("../../static/images/Hero-edit.jpg");
+    background-image: url("/images/Hero-edit.jpg");
     background-size: cover;
 }
 
@@ -626,6 +626,11 @@ header::after{
     }
     .Work-Education-grid{
         width: 90%;
+    }
+}
+@media (max-width: 550px) {
+    .flex-responsive{
+        flex-direction: column;
     }
 }
 @media (max-width: 500px) {
