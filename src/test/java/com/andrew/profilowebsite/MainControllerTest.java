@@ -2,6 +2,7 @@ package com.andrew.profilowebsite;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.OS;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -32,7 +33,13 @@ public class MainControllerTest {
     public void testMainPage() throws Exception {
        MvcResult result =  mvc.perform(MockMvcRequestBuilders.get("/Home").accept("text/html")).andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
        String strResult = result.getResponse().getContentAsString().strip();
-       String homeHtmlFile = Files.readAllLines(new File("src/main/resources/templates/Home.html").toPath()).stream().map(Object::toString).collect(Collectors.joining("\r\n")).strip();
+        String homeHtmlFile;
+       if(OS.current() == OS.WINDOWS){
+           homeHtmlFile = Files.readAllLines(new File("src/main/resources/templates/Home.html").toPath()).stream().map(Object::toString).collect(Collectors.joining("\r\n")).strip();
+       }
+       else{
+           homeHtmlFile = Files.readAllLines(new File("src/main/resources/templates/Home.html").toPath()).stream().map(Object::toString).collect(Collectors.joining("\n")).strip();
+       }
        Assertions.assertEquals(strResult,homeHtmlFile);
     }
 
@@ -45,7 +52,13 @@ public class MainControllerTest {
     public void testBlogPage() throws Exception {
         MvcResult result =  mvc.perform(MockMvcRequestBuilders.get("/Blog").accept("text/html")).andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
         String strResult = result.getResponse().getContentAsString().strip();
-        String homeHtmlFile = Files.readAllLines(new File("src/main/resources/templates/Blog.html").toPath()).stream().map(Object::toString).collect(Collectors.joining("\r\n")).strip();
-        Assertions.assertEquals(strResult,homeHtmlFile);
+        String blogHtmlFile;
+        if(OS.current() == OS.WINDOWS){
+           blogHtmlFile = Files.readAllLines(new File("src/main/resources/templates/Blog.html").toPath()).stream().map(Object::toString).collect(Collectors.joining("\r\n")).strip();
+        }
+        else {
+            blogHtmlFile = Files.readAllLines(new File("src/main/resources/templates/Blog.html").toPath()).stream().map(Object::toString).collect(Collectors.joining("\n")).strip();
+        }
+        Assertions.assertEquals(strResult,blogHtmlFile);
     }
 }
